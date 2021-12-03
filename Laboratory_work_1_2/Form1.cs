@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,8 +14,8 @@ namespace Laboratory_work_1_2
 {
     public partial class Form1 : Form
     {
-        private const string DEFAULT_MESSAGE = "This is the default message";
-       
+        private const string DEFAULT_MESSAGE = "Enter a message here";
+
         public Form1()
         {
             InitializeComponent();
@@ -162,6 +163,41 @@ namespace Laboratory_work_1_2
         private void buttonGet_Text_Click(object sender, EventArgs e)
         {
             MessageBox.Show(comboBoxChooseProgram.Text);
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonRunExtraProgram_Click(object sender, EventArgs e)
+        {
+            if (textBoxExtraName.Text.Length >= 1 && textBoxExtraPath.Text.Contains(".exe"))
+            {
+                ProcessStartInfo startInfo = new ProcessStartInfo();
+                startInfo.FileName = textBoxExtraName.Text;
+                startInfo.Arguments = "\"" + textBoxExtraPath.Text + "\"";
+                Process.Start(startInfo);
+            }
+            else
+            {
+                MessageBox.Show("Ведіть коректні дані");
+            }
+        }
+
+        private void textBoxExtraName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxExtraPath_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

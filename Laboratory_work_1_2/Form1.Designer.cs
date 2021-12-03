@@ -46,6 +46,11 @@ namespace Laboratory_work_1_2
             this.checkBoxShowProgram = new System.Windows.Forms.CheckBox();
             this.checkBoxShowMessage = new System.Windows.Forms.CheckBox();
             this.buttonGet_Text = new System.Windows.Forms.Button();
+            this.textBoxExtraName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxExtraPath = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBoxEnable.SuspendLayout();
             this.groupBoxShow.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +69,7 @@ namespace Laboratory_work_1_2
             // 
             this.labelMessage.AutoSize = true;
             this.labelMessage.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelMessage.Location = new System.Drawing.Point(71, 61);
+            this.labelMessage.Location = new System.Drawing.Point(71, 38);
             this.labelMessage.Name = "labelMessage";
             this.labelMessage.Size = new System.Drawing.Size(149, 25);
             this.labelMessage.TabIndex = 1;
@@ -74,7 +79,7 @@ namespace Laboratory_work_1_2
             // textBoxMessage
             // 
             this.textBoxMessage.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxMessage.Location = new System.Drawing.Point(226, 61);
+            this.textBoxMessage.Location = new System.Drawing.Point(226, 35);
             this.textBoxMessage.Multiline = true;
             this.textBoxMessage.Name = "textBoxMessage";
             this.textBoxMessage.Size = new System.Drawing.Size(310, 33);
@@ -83,7 +88,7 @@ namespace Laboratory_work_1_2
             // buttonShowMessage
             // 
             this.buttonShowMessage.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonShowMessage.Location = new System.Drawing.Point(570, 50);
+            this.buttonShowMessage.Location = new System.Drawing.Point(569, 27);
             this.buttonShowMessage.Name = "buttonShowMessage";
             this.buttonShowMessage.Size = new System.Drawing.Size(154, 46);
             this.buttonShowMessage.TabIndex = 3;
@@ -94,7 +99,7 @@ namespace Laboratory_work_1_2
             // buttonDefaultMessage
             // 
             this.buttonDefaultMessage.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonDefaultMessage.Location = new System.Drawing.Point(119, 131);
+            this.buttonDefaultMessage.Location = new System.Drawing.Point(96, 93);
             this.buttonDefaultMessage.Name = "buttonDefaultMessage";
             this.buttonDefaultMessage.Size = new System.Drawing.Size(197, 45);
             this.buttonDefaultMessage.TabIndex = 4;
@@ -105,7 +110,7 @@ namespace Laboratory_work_1_2
             // buttonClearMessage
             // 
             this.buttonClearMessage.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonClearMessage.Location = new System.Drawing.Point(486, 131);
+            this.buttonClearMessage.Location = new System.Drawing.Point(497, 93);
             this.buttonClearMessage.Name = "buttonClearMessage";
             this.buttonClearMessage.Size = new System.Drawing.Size(197, 45);
             this.buttonClearMessage.TabIndex = 5;
@@ -234,7 +239,7 @@ namespace Laboratory_work_1_2
             // buttonGet_Text
             // 
             this.buttonGet_Text.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonGet_Text.Location = new System.Drawing.Point(330, 184);
+            this.buttonGet_Text.Location = new System.Drawing.Point(330, 122);
             this.buttonGet_Text.Name = "buttonGet_Text";
             this.buttonGet_Text.Size = new System.Drawing.Size(136, 34);
             this.buttonGet_Text.TabIndex = 11;
@@ -242,11 +247,69 @@ namespace Laboratory_work_1_2
             this.buttonGet_Text.UseVisualStyleBackColor = true;
             this.buttonGet_Text.Click += new System.EventHandler(this.buttonGet_Text_Click);
             // 
+            // textBoxExtraName
+            // 
+            this.textBoxExtraName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxExtraName.Location = new System.Drawing.Point(205, 171);
+            this.textBoxExtraName.Multiline = true;
+            this.textBoxExtraName.Name = "textBoxExtraName";
+            this.textBoxExtraName.Size = new System.Drawing.Size(169, 40);
+            this.textBoxExtraName.TabIndex = 12;
+            this.textBoxExtraName.TextChanged += new System.EventHandler(this.textBoxExtraName_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(12, 174);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(194, 25);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Name of the program";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // textBoxExtraPath
+            // 
+            this.textBoxExtraPath.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxExtraPath.Location = new System.Drawing.Point(435, 171);
+            this.textBoxExtraPath.Multiline = true;
+            this.textBoxExtraPath.Name = "textBoxExtraPath";
+            this.textBoxExtraPath.Size = new System.Drawing.Size(169, 40);
+            this.textBoxExtraPath.TabIndex = 14;
+            this.textBoxExtraPath.TextChanged += new System.EventHandler(this.textBoxExtraPath_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(380, 177);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 25);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Path";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.Location = new System.Drawing.Point(620, 171);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(168, 37);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "Run the program";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.buttonRunExtraProgram_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBoxExtraPath);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxExtraName);
             this.Controls.Add(this.buttonGet_Text);
             this.Controls.Add(this.groupBoxEnable);
             this.Controls.Add(this.groupBoxShow);
@@ -289,6 +352,11 @@ namespace Laboratory_work_1_2
         private System.Windows.Forms.CheckBox checkBoxShowProgram;
         private System.Windows.Forms.CheckBox checkBoxShowMessage;
         private System.Windows.Forms.Button buttonGet_Text;
+        private System.Windows.Forms.TextBox textBoxExtraName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxExtraPath;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
     }
 }
 
