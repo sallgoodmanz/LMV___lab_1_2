@@ -14,6 +14,7 @@ namespace Laboratory_work_1_2
     public partial class Form1 : Form
     {
         private const string DEFAULT_MESSAGE = "This is the default message";
+       
         public Form1()
         {
             InitializeComponent();
@@ -25,7 +26,10 @@ namespace Laboratory_work_1_2
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            checkBoxEnableMessage.Checked = true;
+            checkBoxEnableProgram.Checked = true;
+            checkBoxShowProgram.Checked = true;
+            checkBoxShowMessage.Checked = true;
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -95,60 +99,64 @@ namespace Laboratory_work_1_2
         {
             if (checkBoxEnableMessage.Checked)
             {
-                buttonShowMessage.Enabled = false;
-                buttonDefaultMessage.Enabled = false;
-                buttonClearMessage.Enabled = false;
-                textBoxMessage.Enabled = false;
-            }
-            else
-            {
                 buttonShowMessage.Enabled = true;
                 buttonDefaultMessage.Enabled = true;
                 buttonClearMessage.Enabled = true;
                 textBoxMessage.Enabled = true;
+            }
+            else
+            {
+                buttonShowMessage.Enabled = false;
+                buttonDefaultMessage.Enabled = false;
+                buttonClearMessage.Enabled = false;
+                textBoxMessage.Enabled = false;
             }
         }
         private void checkBoxEnableProgram_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxEnableProgram.Checked)
             {
-                buttonRunAProgram.Enabled = false;
-                comboBoxChooseProgram.Enabled = false;
+                buttonRunAProgram.Enabled = true;
+                comboBoxChooseProgram.Enabled = true;
+                buttonGet_Text.Enabled = true;
             }
             else
             {
-                buttonRunAProgram.Enabled = true;
-                comboBoxChooseProgram.Enabled = true;
+                buttonRunAProgram.Enabled = false;
+                comboBoxChooseProgram.Enabled = false;
+                buttonGet_Text.Enabled = false;
             }
         }
         private void checkBoxShowMessage_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxShowMessage.Checked)
             {
-                buttonShowMessage.Hide();
-                buttonDefaultMessage.Hide();
-                buttonClearMessage.Hide();
-                textBoxMessage.Hide();
-            }
-            else
-            {
                 buttonShowMessage.Show();
                 buttonDefaultMessage.Show();
                 buttonClearMessage.Show();
                 textBoxMessage.Show();
+            }
+            else
+            {
+                buttonShowMessage.Hide();
+                buttonDefaultMessage.Hide();
+                buttonClearMessage.Hide();
+                textBoxMessage.Hide();
             }
         }
         private void checkBoxShowProgram_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxShowProgram.Checked)
             {
-                buttonRunAProgram.Hide();
-                comboBoxChooseProgram.Hide();
+                buttonRunAProgram.Show();
+                comboBoxChooseProgram.Show();
+                buttonGet_Text.Show();
             }
             else
             {
-                buttonRunAProgram.Show();
-                comboBoxChooseProgram.Show();
+                buttonRunAProgram.Hide();
+                comboBoxChooseProgram.Hide();
+                buttonGet_Text.Hide();
             }
         }
         private void buttonGet_Text_Click(object sender, EventArgs e)
